@@ -1,0 +1,8 @@
+{
+  "name": "weibo-crawler",
+  "description": "weibo-crawler fetch sina weibo data.",
+  "version": "0.1.0",
+  "dependencies": {
+    "nopt": "~2.1.2"
+  }
+}
