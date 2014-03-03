@@ -8,5 +8,9 @@
     "moment": "~2.5.1",
     "mkdirp": "~0.3.5",
     "word": "~0.2.4"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-copy": "~0.4.0"
   }
 }

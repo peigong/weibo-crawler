@@ -1,0 +1,20 @@
+{
+  "name": "weibo-crawler",
+  "version": "0.1.0",
+  "homepage": "https://github.com/peigong/weibo-crawler",
+  "authors": [
+    "周培公 <peigong@foxmail.com>"
+  ],
+  "description": "weibo-crawler fetch sina weibo data.",
+  "license": "MIT",
+  "dependencies": {
+    "weibo-keywords": "~0.1.0"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
