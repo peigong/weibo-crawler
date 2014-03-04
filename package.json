@@ -7,6 +7,8 @@
     "async": "~0.2.10",
     "moment": "~2.5.1",
     "mkdirp": "~0.3.5",
+    "log4js": "~0.6.9",
+    "iconv-lite": "~0.2.11",
     "word": "~0.2.4"
   },
   "devDependencies": {
