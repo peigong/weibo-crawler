@@ -11,7 +11,7 @@ module.exports = function(grunt) {
           {
             expand: true,
             cwd: 'bower_components/weibo-keywords',
-            src: ['keywords.conf'],
+            src: ['sina-keywords.conf', 'twitter-keywords.conf'],
             dest: 'config/'
           }
         ]

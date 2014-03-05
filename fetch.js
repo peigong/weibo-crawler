@@ -1,16 +1,32 @@
 
 var nopt = require("nopt");
-var TopticDirector = require('./lib/toptic-director.js');
+var TopicDirector = require('./lib/topic-director.js');
+var TweetDirector = require('./lib/tweet-director.js');
 
-var knownOpts = { "word" : [String, null] }
-  , shortHands = { "w" : ["--word"] }
+var knownOpts = { "type" : [String, null], "word" : [String, null] }
+  , shortHands = { "t" : ["--type"], "w" : ["--word"] }
   , params = nopt(knownOpts, shortHands, process.argv, 2);
 
+function printUsage(){
+    console.log('Usage:node run -t sina|twitter');
+}
+
+var type = params.type;
 var word = params.word;
-if(word){
-    var director = new TopticDirector();
-    director.fetch(word);
+if(type && word){
+    switch(type){
+        case 'sina':
+            director = new TopicDirector();
+            director.fetch(word);
+            break;
+        case 'twitter':
+            director = new TweetDirector();
+            director.fetch(word);
+            break;
+        default:
+            printUsage();
+    }
 }else{
-    console.log('Usage:node fetch -w word');
+    printUsage();
 }
 
