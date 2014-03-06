@@ -1,6 +1,6 @@
-# weibo-crawler #
+# Weibo Crawler #
 
-用于爬取新浪微博数据的工具。
+用于爬取新浪微博和twitter数据的工具。
 
 ## 依赖环境 ##
 
@@ -15,7 +15,8 @@
 
 ## 抓取配置文件规范 ##
 
-1. 新浪配置文件是`config/sina-keywords.conf`，twitter配置文件是`config/twitter-keywords.conf`。
+1. 新浪配置文件是`config/sina-keywords.conf`
+2. twitter配置文件是`config/twitter-keywords.conf`。
 2. 文件编码UTF-8 
 3. 以“主话题:关键词,关键词,关键词,关键词,关键词”的格式存储数据。 
 4. 冒号和逗号要是英文的标点符号。 
