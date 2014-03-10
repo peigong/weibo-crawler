@@ -5,6 +5,7 @@ var path = require('path');
 //var logger = require('./lib/logger.js');
 var TopicDirector = require('./lib/topic-director.js');
 var TweetDirector = require('./lib/tweet-director.js');
+var BaiduDirector = require('./lib/baidu-director.js');
 
 var knownOpts = { "type" : [String, null] }
   , shortHands = { "t" : ["--type"] }
@@ -23,7 +24,12 @@ switch(type){
         director = new TweetDirector();
         director.run(filename);
         break;
+    case 'baidu':
+        filename = path.normalize(path.resolve(__dirname, 'config', 'baidu-keywords.conf'));
+        director = new BaiduDirector();
+        director.run(filename);
+        break;
     default:
-        console.log('Usage:node run -t sina|twitter');
+        console.log('Usage:node run -t sina|twitter|baidu');
 }
 
